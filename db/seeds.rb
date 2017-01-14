@@ -1,3 +1,13 @@
+require 'activerecord-reset-pk-sequence'
+Figure.delete_all
+Figure.reset_pk_sequence
+Landmark.delete_all
+Landmark.reset_pk_sequence
+Title.delete_all
+Title.reset_pk_sequence
+FigureTitle.delete_all
+FigureTitle.reset_pk_sequence
+
 landmarks_list = {
     "Madison Square Guarden" => {
       :year_completed => 1901
@@ -44,7 +54,7 @@ figure_list = {
     },
     "Ada Lovelace" => {
     },
-    "Linus Torvalds" => { 
+    "Linus Torvalds" => {
     }
   }
 
